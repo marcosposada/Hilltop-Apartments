@@ -1,0 +1,107 @@
+.page-bookings {
+  .inner-wrap {
+    min-width: 525px;
+  }
+  .content-area {
+    width: 100%;
+    min-width: 525px;
+    min-height: 1200px;
+    @media #{$medium-up} {
+      width: 60%;
+      min-width: auto;
+    }
+    .roomTypesGadget {
+      border-radius: 0;
+      .searchTools {
+        padding: 1em;
+        border-radius: 0;
+        //position: static;
+      }
+    }
+
+    .displayGrid {
+      table {
+        th {
+          background-color: $dark-grey;
+          &.weekend {
+            //background-color: $green;
+          }
+        }
+      }
+      .button {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        position: static;
+        background-color: #FFF;
+        a {
+          width: 100px;
+          height: 38px;
+          position: static;
+          font-size: 75%;
+        }
+        .nonConsec {
+          font-family: $main-font;
+          padding: 5px 10px;
+          margin: 0;
+          border-radius: 3px;
+          background-color: #58585A;
+          text-transform: uppercase;
+          color: #FFF;
+        }
+        .bookable {
+          background-color: $green;
+        }
+      }
+      #filterToggle {
+        font-family: $main-font;
+        padding: 5px 10px;
+        margin: 0;
+        color: #000;
+        border-radius: 3px;
+        background-color: $green;
+        text-transform: uppercase;
+      }
+      th {
+        &.data {
+          width: 8% !important;
+          b {
+            //display: inline-block;
+            padding-right: 2px;
+            margin: 0;
+          }
+        }
+      }
+
+    }
+    .searchTools {
+      position: relative;
+    }
+  }
+  .checkIn {
+    a {
+      border: none !important;
+      span.text {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        width: 12em !important;
+      }
+    }
+  }
+
+  .inclusionHover {
+    h3 {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    div {
+      .value {
+        top: 0;
+      }
+    }
+  }
+  footer {
+    @media only screen and (min-width: #{lower-bound($medium-range)}) and (max-width: 1410px) {
+      display: none;
+    }
+  }
+}

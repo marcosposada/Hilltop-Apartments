@@ -1,0 +1,116 @@
+.page-rates {
+  .entry-content {
+    .table-list-rates {
+      width: 100%;
+      background: none;
+      border: none;
+      font-family: Arial;
+      clear: both;
+      th, td {
+        background: none;
+        color: white;
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+        padding: 5px 8px;
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      th {
+        font-size: 90%;
+        font-family: $main-font;
+        text-transform: uppercase;
+        width: 20%;
+        text-align: center;
+        span {
+          font-size: 75%;
+          font-weight: normal;
+          font-family: Helvetia, Arial, sans-serif;
+        }
+        &.th-apartment {
+          font-size: 110%;
+          line-height: normal;
+          width: 40%;
+          text-align: left;
+          color: $green;
+        }
+      }
+      td {
+
+        text-align: center;
+        &.td-apartment {
+          width: 40%;
+          text-align: left;
+          text-transform: uppercase;
+          a {
+            color: white;
+          }
+        }
+        &.td-weekday, &.td-weekend, &.td-events {
+          font-size: 100%;
+        }
+      }
+      tr {
+        background: none;
+        &:last-child td {
+          border-bottom: none;
+        }
+      }
+
+      &:nth-of-type(even) {
+        background: none;
+      }
+    }
+
+    h3 {
+      font-family: $main-font;
+      color: white;
+      font-size: 100%;
+      line-height: normal;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    p, li {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 92%;
+      line-height: 120%;
+
+    }
+    li {
+      margin: 8px 0;
+      padding: 0;
+    }
+    .rates-tab-links {
+      list-style: none;
+      float: right;
+      margin-top: -50px;
+      @media #{$medium-up} {
+        margin-top: -115px;
+      }
+      li {
+        float: left;
+        border: 1px solid white;
+        margin: 0;
+        a {
+          display: block;
+          font-size: 80%;
+          font-family: $main-font;
+          color: #FFF;
+          padding: 3px 10px;
+          text-transform: uppercase;
+        }
+        &.selected {
+          a {
+            background: #FFF;
+            color: #000;
+          }
+        }
+      }
+    }
+    #tab-off-peak-rates {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,250 @@
+.rooms {
+  .table-rate {
+    width: 100%;
+    background: none;
+    border: none;
+    font-family: Arial;
+
+    th, td {
+      background: none;
+      color: white;
+      border-bottom: 1px solid white;
+      border-right: 1px solid white;
+      padding: 5px 8px;
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    th {
+      font-size: 100%;
+      font-family: $main-font;
+
+      span {
+          font-size: 75%;
+          font-weight: normal;
+          font-family: Helvetia, Arial, sans-serif;
+      }
+
+      &.th-rate {
+        width: 50%;
+      }
+
+      &.th-peak {
+        width: 25%;
+        text-align: center;
+      }
+
+      &.th-off-peak {
+        width: 25%;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+    }
+    td {
+
+      &.td-rate {
+        text-transform: uppercase;
+      }
+      &.td-peak {
+        text-align: center;
+      }
+      &.td-off-peak {
+        text-align: center;
+      }
+    }
+    tr {
+      background: none;
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+
+    &:nth-of-type(even) {
+      background: none;
+    }
+  }
+  .entry-content {
+    h3 {
+      font-family: $main-font;
+      font-size: 100%;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .room-thumb-list {
+      margin: 20px 0 50px 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        opacity: 1;
+        margin: 0 5px 5px 0;
+        img {
+          width: 130px;
+          border: 1px solid #FFF;
+          @media #{$medium-up} {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+  }
+
+
+  .nav-links {
+    @include grid-row();
+    text-transform: uppercase;
+    .next, .previous {
+      color: #FFF;
+      font-size: 0.8em;
+
+      &.disabled {
+        color: #CCC;
+      }
+      .fa {
+        display: inline-block;
+        font-size: 30px;
+        height: 40px;
+      }
+      span {
+        display: block;
+      }
+    }
+    .previous {
+      @include grid-column(6);
+      text-align: left;
+      padding-left: 0;
+      padding-right: 0;
+      .fa {
+        padding: 2px 10px 0 0;
+        float:left;
+        padding-left: 0px;
+      }
+    }
+    .next {
+      @include grid-column(6);
+      text-align: right;
+      padding-left: 0;
+      padding-right: 0;
+      .fa {
+        padding: 2px 0 0 10px;
+        float: right;
+      }
+    }
+    .title {
+      font-family: $main-font;
+      font-size: 1.0em;
+    }
+  }
+}
+
+#modal-image {
+  width: 100%;
+}
+.reveal-modal-bg {
+  background: rgba(0, 0, 0, 0.80) !important;
+}
+.reveal-modal {
+  min-height: 0 !important;
+  padding: 0;
+  margin-top: 20px;
+  @media #{$medium-up} {
+    margin-top: auto;
+    padding: 10px;
+  }
+  .close-reveal-modal {
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.0em;
+    text-align: right;
+    line-height: normal;
+    right: 10px;
+    @media #{$medium-up} {
+      right: 0;
+    }
+    span {
+      font-size: 1.8em;
+      display: inline-block;
+      line-height: 12px;
+      vertical-align: top;
+    }
+  }
+}
+.modal-image-description {
+  width: 50%;
+  display: inline-block;
+  float: left;
+  font-size: 0.8em;
+  line-height: 1.2em !important;
+  padding: 10px;
+}
+#image-description {
+  font-weight: bold;
+
+}
+#image-index {
+  display: block;
+}
+#gallery-image-modal {
+
+}
+
+.btn-arrow {
+  position: absolute;
+  display: block;
+  top: 30%;
+  @media #{$medium-up} {
+    top: 40%;
+  }
+  i {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.37);
+    opacity: 0.7;
+    @media #{$medium-up} {
+      font-size: 80px;
+    }
+  }
+}
+.btn-modal-prev {
+  left: 30px;
+  @media #{$medium-up} {
+    left: 40px;
+  }
+}
+
+.btn-modal-next {
+  right: 30px;
+  @media #{$medium-up} {
+    right: 40px;
+  }
+}
+
+#loader-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#loading {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  color: #000;
+  background-color: $green;
+  font-family: $main-font;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 23px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow:    3px 3px 23px 0px rgba(0, 0, 0, 0.8);
+  box-shadow:         3px 3px 23px 0px rgba(0, 0, 0, 0.8);
+}

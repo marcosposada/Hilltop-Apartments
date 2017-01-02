@@ -1,0 +1,110 @@
+.content-area {
+  //@include grid-column(12);
+  //position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0.7em 25px 0.7rem;
+  display: block;
+  color: white;
+  min-height: 100vh;
+
+  @media #{$medium-up} {
+    background: rgba(0, 0, 0, 0.70);
+    padding: 20px 2em 25px 2rem;
+    display: table-cell;
+    border-spacing: 0 0;
+    vertical-align: top;
+    width: 28%;
+    min-width: 395px;
+    height: 100vh;
+    border-right: 10px solid $green;
+  }
+  .entry-header {
+    margin: 0;
+    padding: 0;
+    display: table;
+    height: auto;
+    //margin-top: 20px;
+    //position: relative;
+    @media #{$medium-up} {
+      height: auto;
+    }
+  }
+  .entry-title {
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-size: 1.5em;
+    display: table-cell;
+    vertical-align: bottom;
+    @media #{$large-up} {
+      font-size: 3.5vw;
+      line-height: 3.8vw;
+    }
+    @media only screen and (min-width: #{lower-bound($medium-range)}) and (max-width: 1405px) {
+      font-size: 48px;
+      line-height: 1.2em;
+    }
+  }
+  .entry-content {
+    font-size: 1.0rem;
+    line-height: 1.2;
+    margin-top: 20px;
+    &.home-main {
+      @media #{$small-only} {
+        margin-top: -10px;
+      }
+    }
+    @media #{$medium-up} {
+      height: auto;
+      margin-top: 80px;
+    }
+  }
+
+  }
+.space {
+  display: none;
+  @media #{$medium-up} {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+}
+
+.btn-check-avail {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 100%;
+  font-family: $main-font;
+  font-weight: bold;
+  background-color: #AFC73A;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-shadow: none;
+}
+
+.entry-content {
+    h3 {
+    font-family: $main-font;
+    color: white;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  p, li {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 92%;
+    line-height: 120%;
+    opacity: 0.85;
+  }
+  li {
+    margin: 8px 0;
+    padding: 0;
+  }
+
+}

@@ -1,0 +1,10 @@
+#home {
+
+  @media #{$medium-up} {
+    background: none;
+    border-right: none;
+    .home-main {
+      display: none;
+    }
+  }
+}

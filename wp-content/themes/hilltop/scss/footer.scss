@@ -1,0 +1,40 @@
+footer {
+
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 0.70em;
+  padding: 10px 10px 20px 10px;
+  z-index: 999;
+  text-align: center;
+  position: static;
+
+  a {
+    color: #AFC73A;
+  }
+  @media #{$medium-up} {
+    width: 32%;
+    display: block;
+    background: none;
+    position: fixed;
+    text-align: right;
+    bottom: 10px;
+    right: 4%;
+  }
+  @media only screen and (min-width: 640px) and (max-width: 970px) {
+    position: absolute;
+    text-align: left;
+    bottom: 10px;
+    left: 0%;
+    padding-left: 0;
+    padding-right: 0;
+    div {
+      width:230px;
+      text-align: center;
+      .seperator {
+        display: none;
+      }
+      a { display: block; }
+    }
+  }
+}

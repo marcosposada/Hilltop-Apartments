@@ -1,0 +1,146 @@
+html, body {
+  height: auto;
+
+}
+
+.container {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  border-spacing: 0;
+  background: rgba(0, 0, 0, 0.70);
+  @media #{$medium-up} {
+    display: table;
+    background: none;
+  }
+}
+
+.image-caption {
+  position: absolute;
+  top: 0;
+  right: 4%;
+  text-align: center;
+  color: white;
+  background: rgba(3, 8, 13, 0.50);
+  padding: 20px;
+  display: none;
+  transition: 0.8s;
+  @media #{$medium-up} {
+    display: block;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1.3em;
+    line-height: normal;
+    text-transform: uppercase;
+    font-family: $main-font;
+  }
+  @media only screen and (min-width: #{lower-bound($medium-range)}) and (max-width: 860px) {
+    display: none;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.txt-highlight {
+  color: $green !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.hidden {
+  display: none;
+}
+
+// Home section
+
+#home {
+  padding: 0;
+
+
+}
+
+.home-main {
+  @media #{$small-only} {
+    margin-top: 0;
+  }
+
+  .accordion {
+    margin: 0;
+    .accordion-navigation > .content.active {
+      background:rgba(0, 0, 0, 0.5);
+    }
+  }
+  #menu-mobile-rooms-menu {
+    list-style: none;
+    li {
+      display: block;
+      text-align: center;
+
+      a {
+        display: block;
+        font-size: 1.5em;
+        text-align: center;
+        color: white;
+        text-shadow: 0px 1px 2px #000;
+        font-family: $main-font;
+        text-transform: uppercase;
+        margin: 1em;
+        padding: 0;
+      }
+
+    }
+  }
+  .accordion .accordion-navigation > a, .accordion dd > a {
+    padding: 0;
+  }
+  .rooms, a.mobile-accordion-button.rooms {
+    background:rgba(0, 0, 0, 0.5) url('images/rooms.png') center center;
+  }
+  .rates {
+    background:rgba(0, 0, 0, 0.5) url('images/rates.png') center bottom;
+  }
+  .about {
+    background:rgba(0, 0, 0, 0.5) url('images/about.png') center center;
+  }
+  .contact {
+    background:rgba(0, 0, 0, 0.5) url('images/contact.png') center center;
+  }
+a {
+  display: block;
+}
+  section, .mobile-accordion-button {
+    height: 100%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background-size: cover;
+
+    &:first-child {
+      //border-top: none;
+    }
+    .section-overlay {
+      display: block;
+      padding: rem-calc(52) 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    b {
+      display: block;
+      font-size: 2.5em;
+      text-align: center;
+      color: white;
+      text-shadow: 0px 1px 2px #000;
+      font-family: $main-font;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+
+    }
+  }
+
+}

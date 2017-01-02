@@ -1,0 +1,37 @@
+
+.off-canvas-wrap, .inner-wrap {
+  //height: 100%;
+}
+
+.off-canvas-wrap{
+  //height: 100%;
+  //overflow: scroll;
+  @media #{$large-up} {
+    overflow: visible;
+  }
+}
+
+.inner-wrap {
+  position: relative;
+}
+
+p {
+  text-shadow: 0px 1px 2px #000;
+}
+
+a {
+  color: $green;
+  &:hover {
+    //color: $green;
+    //text-decoration: underline;
+  }
+}
+
+#supersized {
+  margin-left:0;
+  padding-left:0;
+}
+
+#supersized img {
+  max-width: none !important;
+}
